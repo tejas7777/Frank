@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Welcome</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+
+        <link rel="stylesheet" type="text/css" href="<%= url('./css/main.css') %>">
+        
+    </head>
+
+
+<body>
+<!--Navbar-->
+<nav class="navbar navbar-dark default-color bg-primary navbar-expand-lg py-4">
+  <a class="navbar-brand">Frank</a>
+  <div class="form-inline my-2 my-lg-0 ml-auto">
+    <!-- <input class="form-control" type="search" placeholder="Search" aria-label="Search"> -->
+    <form action="/logout"><button class="btn border-white btn-md my-2 my-sm-0 ml-3 btn-primary">Logout</button></form>
+  </div>
+</nav>
+<!--/.Navbar-->
+<div>
+
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col-4">
+            <div class="card text-white bg-info">
+                <div class="card-body">
+                    <h3 class="card-title">Connect to websockets</h3>
+                    <button  class="btn text-white border-light" onclick="connectToSocket()">Connect</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<!--<script src="<%= url('./js/main.js') %>"> -->
+<script>
+isConnected = "false";
+
+console.log("Script Present!")
+
+function connectToSocket(){
+    console.log("Here")
+    if(true){
+        isConnected = true;
+        var scheme   = "ws://";
+        var uri = scheme + window.document.location.host + "/";
+        var ws  = new WebSocket(uri,'echo-protocol');
+        console.log("Connected");
+    }
+}
+</script>
+</body>
+</html>

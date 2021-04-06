@@ -1,0 +1,27 @@
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" type="text/css" href="<%= url('./css/style.css') %>">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="formDiv">
+        <form action="/login" method="post">
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Username" name="username">
+           </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Password" name="password">
+            </div>
+            <button type="submit" class="btn">Log In</button>
+         </form>
+</div>
+<script src="https://kit.fontawesome.com/4077c6ef6a.js" crossorigin="anonymous"></script>
+<!-- partial -->
+
+</body>
+</html>
